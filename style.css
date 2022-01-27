@@ -59,22 +59,26 @@ ul {
     list-style: none;
     margin-top:10px;
     margin-bottom:10px;
+    padding:none;
 }
 
 li {
-    margin:1.5em;
+
+    margin:25px 5px 20px 5px;
+   
 }
 
 li button {
-    margin-left:4px;
+    margin-left:8px;
 }
 
 .wrapper {
     background-color:rgb(128,128,128, 0.3);
-    
     border-radius:10px;
+    width:fit-content;
     border: 8px solid black;
     margin: 2% 33% 15% 33%;
+    padding:5px 5px;
 }
 
 .bottomtext {
