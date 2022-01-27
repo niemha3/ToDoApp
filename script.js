@@ -5,32 +5,23 @@ let listItems = document.querySelectorAll("li");
 
 function inputLength() {
     return input.value.length;
-    
-}
+    }
 
-
-function createListItem () {
+    function createListItem () {
     if(inputLength() > 0) {
     
-    let li = document.createElement("li");
-    li.appendChild(document.createTextNode(input.value));
-    ul.appendChild(li);
+        let li = document.createElement("li");
+        li.appendChild(document.createTextNode(input.value));
+        ul.appendChild(li);
     
 
-    let delButton = document.createElement("button");
-    delButton.appendChild(document.createTextNode("Delete"));
-    li.appendChild(delButton);
-    input.value = "";
-
- 
-
-    delButton.addEventListener("click", removeParent);
-
- 
+        let delButton = document.createElement("button");
+        delButton.appendChild(document.createTextNode("Delete"));
+        li.appendChild(delButton);
+        input.value = "";
+        delButton.addEventListener("click", removeParent);
     }
 }
-
-
 
 function createListItemAfterKeyPress () {
     if (inputLength() > 0 && event.keyCode=== 13) {
@@ -38,12 +29,9 @@ function createListItemAfterKeyPress () {
     }
 }
 
-
-
 function taskDone(event) {
     let target = event.target;
     target.classList.toggle("done");
-
 }
 
 button.addEventListener("click", createListItem);
@@ -57,8 +45,6 @@ function addButtons () {
     listItems[i].appendChild(button);
 
     button.addEventListener("click", removeParent)
-    
-
 }
 
 function listLength() {
